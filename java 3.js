@@ -1,3 +1,8 @@
+
+setTimeout
+setInterval{()=>{
+    console.log("k")
+},1000}
 et s="i am a seperated sentence";
 let r= s.split("a");
 console.log(r)
@@ -18,8 +23,3 @@ const t=()=>{
 }
 
 // sincronus ; we can move to another task after the execution,unsincronus; we can move to another task before the execution
-
-setTimeout
-setInterval{()=>{
-    console.log("k")
-},1000}
