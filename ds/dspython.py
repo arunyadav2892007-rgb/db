@@ -210,54 +210,290 @@
 #     a=a+i
 #     b=b*i
 # print(a,b)
-class Node:
-     def __init__(self,data = None, next = None):
-         self.data = data
-         self.next = next
-class LinkedList:
-     def __init__(self, head = None):
-         self.head = head
-     def insert_at_begining(self, data):
-         new_node = Node(data, self.head)
-         new_node.next = self.head
-         self.head = new_node
+# class Node:
+#      def __init__(self,data = None, next = None):
+#          self.data = data
+#          self.next = next
+# class LinkedList:
+#      def __init__(self, head = None):
+#          self.head = head
+#      def insert_at_begining(self, data):
+#          new_node = Node(data, self.head)
+#          new_node.next = self.head
+#          self.head = new_node
 
-     def insert_at_end(self, data):
-         new_node = Node(data)
-         temp = self.head
-         while temp.next:
-             temp = temp.next
-         temp.next = new_node
-     def display(self):
-         temp = self.head
-         while temp:
-             print(temp.data, end = " -> ")
-             temp = temp.next
-         print("None")
+#      def insert_at_end(self, data):
+#          new_node = Node(data)
+#          temp = self.head
+#          while temp.next:
+#              temp = temp.next
+#          temp.next = new_node
+#      def display(self):
+#          temp = self.head
+#          while temp:
+#              print(temp.data, end = " -> ")
+#              temp = temp.next
+#          print("None")
 
 
-     def del_at_end(self):
-       temp=self.head
-       if not temp:
-         return
-       if temp.next in None:
-        self.head=None
+#      def del_at_end(self):
+#        temp=self.head
+#        if not temp:
+#          return
+#        if temp.next in None:
+#         self.head=None
+#         return
+#        while temp.next.next:
+#         temp=temp.next
+
+
+#        temp.next=None
+#      def del_at_begning(self):
+#       if not self.head:
+#         return
+#       if not self.head.next:
+#         self.head=None
+#         return
+#       self.head=self.head.next
+# l1 = LinkedList()
+# l1.insert_at_begining(10)
+# l1.insert_at_begining(20)
+# l1.insert_at_end(30)
+# l1.insert_at_end(40)
+# l1.display()
+
+# class Node:
+#     def __init__(self, data = None, next = None, prev = None):
+#         self.data = data
+#         self.next = next
+#         self.prev = prev
+
+# class DLL:
+#     def __init__(self, head = None):
+#         self.head = head
+
+#     def insert_at_Beginning(self,data):
+#         new_nose = Node(data)
+#         if self.head is None:
+#             self.head = None
+#             self.head = new_node
+#             return
+
+#     def insert_at_PQS(self,data,val):
+#         if self.head is None:
+#             self.head.next = new_node
+#             new_node.prev = self.head
+
+
+#     def display(self):
+#         temp = self.head
+#         while temp:
+#             print(temp.data, end = " <-> ")
+#             temp = temp.next
+#             print("None")
+# s="()"
+# if len(s)<1 and len(s)%2==0:
+#     print("false")
+# st=[]
+# for i in range (len(s)):
+#     if s[i]=="(" and s[i]=="{" and s[i]=="[":
+#         st.push(s)
+#     elif !st.empty() and s[i]=="}":
+#         if st.top=="{":
+#             st.pop()
+#         else:
+#             print("false")
+#     elif !st.empty() and s[i]=="]":
+#         if st.top=="[":
+#             st.pop()
+#         else:
+#             print("false")
+#     elif !st.empty() and s[i]==")":
+#         if st.top=="(":
+#             st.pop()
+#         else:
+#             print("false")
+# current=head
+# while current is not None
+# l1+=1
+# current=current.next
+# current=head
+# l1=l1//5
+# class ListNode(object):
+#      def __init__(self, val=0, next=None):
+#          self.val = val
+#          self.next = next
+
+
+# class Solution(object):
+#     def middleNode(self, head):
+#         fast=head
+#         slow=head
+#         while fast and fast.next:
+#             fast=fast.next.next
+#             slow=slow.next
+#         return slow
+
+# class ListNode(object):
+#      def __init__(self, val=0, next=None):
+#          self.val = val
+#          self.next = next
+
+
+# class Solution(object):
+#     def middleNode(self, head):
+#         fast=head
+#         slow=head
+#         while fast and fast.next:
+#             fast=fast.next.next
+#             slow=slow.next
+#             if fast==slow:
+#                 return True
+#         return False
+
+# l=[1,2,2,1]
+# s=len(l)
+# for i in range(0,s+1):
+#     for j in range(-1,-s):
+#         if l[i]==l[j]:
+#             print("ispallinrome")
+#         else:
+#             print("notpalindrome")
+
+# class Solution(object):
+#     def isPalindrome(self, head):
+#         fast=head
+#         slow=head
+#         while fast and fast.next:
+#             fast=fast.next.next
+#             slow=slow.next
+#         temp=None
+#         prev=None
+#         while slow:
+#             temp=slow.next
+#             slow.next=prev
+#             prev=slow
+#             slow=temp
+#             fast=head
+#             while prev:
+#                 if prev.val!=fast.val:
+#                     return False
+#                 fast=fast.next
+#                 slow=slow.next
+#         return True
+
+
+#         """
+#         :type head: Optional[ListNode]
+#         :rtype: bool
+#         """
+    #  dummy=ListNode(0)
+    #     dummy.next=head
+    #     c=0
+    #     curr=head
+    #     while curr:
+    #         c+=1
+    #         curr=curr.next
+    #     curr=head
+    #     temp=dummy
+    #     while c>n:
+    #         temp=curr
+    #         curr=curr.next
+    #         c-=1
+    #     temp.next=curr.next
+    #     return dummy.next
+#  e=headA
+#         j=headB
+#         while e!=j:
+#             if e==None:
+#                 e=headB
+#             else:
+#                 e=e.next
+#             if j==None:
+#                 j=headA
+#             else:
+#                 j=j.next
+#         return e
+# target=5
+# l=[1,2,3,4,5,6,7]
+# c=0
+# h=len(l)-1
+# while c<=h:
+#     mid=(1+h)//2
+#     if l[mid]==target:
+#         print(mid)
+#     elif l[mid]<target:
+#         c=mid+1
+#     else:
+#         h=mid-1
+# print(c)
+
+# n=len(nums):
+# for i in range(n):
+#     for j in range(n-i-1):
+#         if nums[i]>nums[i+1]:
+#             nums[i+1],nums[i]=nums[i],nums[i+1]
+
+
+
+
+# def concour(nums1,nums2):
+#     l1=[]
+#     while i<len(nums1) and j<len(nums2):
+#         if nums1[i]< nums2[j]:
+#             l1.append(nums1[i])
+#             i+=1
+#         else:
+#             l1.append(nums2[j])
+#             j+=1
+#     l1.append(nums1[:i])
+#     l1.append(nums2[j:])
+
+# l=[6,7,8,5,4,0,8,9]
+# if len(l)<=1:
+#     print(l)
+# mid=len(l)//2
+# n=l[:mid]
+# m=l[mid:]
+# x=concour(n,m)
+# print(x)
+# l=[8,9,7,6,5,0,4,2]
+# n=len(l)
+# for i in range (n):
+#     min=i
+#     for j in range(i+1,n):
+#         if l[j]<l[min]:
+#             min=j
+#     l[i],l[min]=l[min],l[j]
+
+
+# root=Node(1)
+# root.left=Node(3)
+# root.left.left=node()
+
+def preorder(self,root):
+    l=[]
+self.traverse(root,l)
+
+
+def traverse(self,root,l)
+    if root is none:
         return
-       while temp.next.next:
-        temp=temp.next
+    l.append(root.val)
+self.traverse(root.left,l)
+self.traverse(root.right,l)
 
 
-       temp.next=None
-     def del_at_begning(self):
-      if not self.head:
-        return
-      if not self.head.next:
-        self.head=None
-        return
-      self.head=self.head.next
-l1 = LinkedList()
-l1.insert_at_begining(10)
-l1.insert_at_begining(20)
-l1.insert_at_end(30)
-l1.insert_at_end(40)
-l1.display()
+
+def traverse(self,root,l)
+    if root is None
+      return
+self.traverse(root.left,l)
+l.append(root.val)
+self.traverse(root.right,l)
+94,144,145
+
+
+
+
+
